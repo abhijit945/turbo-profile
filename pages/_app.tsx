@@ -8,12 +8,6 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <link
-          rel="alternate"
-          type="application/rss+xml"
-          title="RSS"
-          href="/feed.xml"
-        />
-        <link
           rel="preload"
           href="/fonts/Inter-roman.latin.var.woff2"
           as="font"
