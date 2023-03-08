@@ -1,7 +1,7 @@
-import 'nextra-theme-blog/style.css'
-import type { AppProps } from 'next/app'
-import Head from 'next/head'
-import '../styles/main.css'
+import 'nextra-theme-blog/style.css';
+import type { AppProps } from 'next/app';
+import Head from 'next/head';
+import '../styles/main.css';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -14,8 +14,9 @@ export default function App({ Component, pageProps }: AppProps) {
           type="font/woff2"
           crossOrigin="anonymous"
         />
+        <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
       <Component {...pageProps} />
     </>
-  )
+  );
 }
