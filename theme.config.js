@@ -1,32 +1,32 @@
 /* eslint-disable import/no-anonymous-default-export */
-import MainLogo from "./components/MainLogo";
+import MainLogo from './components/MainLogo';
 
 const YEAR = new Date().getFullYear();
 
 /** @type {import('nextra-theme-docs').DocsThemeConfig} */
 export default {
   project: {
-    link: "https://github.com/abhijit945",
+    link: 'https://github.com/abhijit945',
   },
   useNextSeoProps() {
     return {
-      titleTemplate: "%s – Abhijit Rao",
+      titleTemplate: '%s – Abhijit Rao',
     };
   },
   toc: {
     float: true,
-    title: () => "On this Page",
+    title: () => 'On this page',
   },
   editLink: {
-    component: null,
+    component: () => <></>,
   },
   feedback: {
     content: null,
   },
   head: () => {
-    const title = "Abhijit Rao - Blog";
+    const title = 'Abhijit Rao - Blog';
     const description = `Brain dump`;
-    const image = "/icons/main.svg";
+    const image = '/icons/main.svg';
     return (
       <>
         <meta name="msapplication-TileColor" content="#ffffff" />
@@ -46,18 +46,17 @@ export default {
     );
   },
   logo: () => {
-    return <MainLogo width={"100%"} height={24} />;
+    return <MainLogo width={'100%'} height={24} />;
   },
   footer: {
     text: (
       <footer
         style={{
-          display: "flex",
-          alignContent: "center",
+          display: 'flex',
+          alignContent: 'center',
           flex: 1,
-          justifyContent: "center",
-        }}
-      >
+          justifyContent: 'center',
+        }}>
         <time>{YEAR}</time> © Abhijit Rao.
       </footer>
     ),
