@@ -13,10 +13,12 @@ export default {
       titleTemplate: '%s – Abhijit Rao',
     };
   },
+  primaryHue: 330,
   toc: {
     float: true,
     title: () => 'On this page',
   },
+  darkMode: false,
   editLink: {
     component: () => <></>,
   },
@@ -29,6 +31,8 @@ export default {
     const image = '/icons/main.svg';
     return (
       <>
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="msapplication-TileColor" content="#ffffff" />
         <meta name="apple-mobile-web-app-title" content="Abhijit Rao's Blog" />
         <meta name="robots" content="follow, index" />

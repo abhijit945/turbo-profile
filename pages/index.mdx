@@ -4,122 +4,142 @@ title: Introduction
 date: 2023-03-05
 ---
 
-# Abhijit Rao
+import {
+  Card,
+  Container,
+  Group,
+  Image,
+  List,
+  Paper,
+  Space,
+  Title,
+  Flex,
+} from '@mantine/core';
 
-- 🔭 I’m currently working on `Frontend Development` at
-  [@sparkcognition](https://twitter.com/SparkCognition)
-- Ask me about
-  - React
-  - Material UI
-  - D3
-  - Building a PC
-
-💬 Get in touch:
-
-<div
-    style={{
-        display: "flex",
-        flexDirection: "column",
-        border: `1px solid grey`,
-        borderRadius: "8px",
-        padding: 16,
-        gap: 16,
-    }}
->
-    <ul>
-        <li>Twitter [@AbhijitRao_](https://twitter.com/AbhijitRao_)</li>
-        <li>GitHub [@abhijit945](https://github.com/abhijit945)</li>
-        <li>Instagram [@abhijit945](https://instagram.com/abhijit945) </li>
-        <li>Email abhijit945@duck.com</li>
-    </ul>
-</div>
-<div
-    style={{
-        display: "flex",
-        gap: "12px",
-        margin: 16,
-        padding: 16,
-    }}
->
-    <code>
-        <img
-            title="React"
-            alt="React"
-            height="30"
-            width="30"
-            src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png"
-        />
-    </code>
-    <code>
-        <img
-            title="TypeScript"
-            alt="TypeScript"
-            height="30"
-            width="30"
-            src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/typescript/typescript.png"
-        />
-    </code>
-    <code>
-        <img
-            title="Express"
-            alt="Express"
-            height="30"
-            width="30"
-            src="https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/000/359/full/expressjslogo.png"
-        />
-    </code>
-    <code>
-        <img
-            title="Azure"
-            alt="Azure"
-            height="30"
-            width="30"
-            src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/azure/azure.png"
-        />
-    </code>
-    <code>
-        <img
-            title="JavaScript"
-            alt="JavaScript"
-            height="30"
-            width="30"
-            src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png"
-        />
-    </code>
-    <code>
-        <img
-            title="Node"
-            alt="Node"
-            height="30"
-            width="30"
-            src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/nodejs/nodejs.png"
-        />
-    </code>
-    <code>
-        <img
-            title="Storybook"
-            alt="Storybook"
-            height="30"
-            width="30"
-            src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/storybook/storybook.png"
-        />
-    </code>
-    <code>
-        <img
-            title="Webpack"
-            alt="Webpack"
-            height="30"
-            width="30"
-            src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/webpack/webpack.png"
-        />
-    </code>
-    <code>
-        <img
-            title="Git"
-            alt="Git"
-            height="30"
-            width="30"
-            src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/git/git.png"
-        />
-    </code>
-</div>
+<Container>
+      <Image
+        maw={240}
+        mx="auto"
+        radius="md"
+        src="./Profile.png"
+        withPlaceholder
+        alt="Profile image"
+      />
+      <Space h="md" />
+      <List>
+        I’m currently working as a Senior Software Engineer at
+        [SparkCognition](https://twitter.com/SparkCognition)
+      </List>
+      <Space h="md" />
+      <Paper shadow="lg" radius="md" p="md">
+        <Title order={4}>Ask me about</Title>
+        <List spacing={4} listStyleType="disc">
+          <List.Item>React</List.Item>
+          <List.Item>Next.js</List.Item>
+          <List.Item>Material UI</List.Item>
+          <List.Item>D3</List.Item>
+          <List.Item>Building a PC</List.Item>
+          <Space h="md" />
+          <Group>
+            <code>
+              <Image
+                title="React"
+                alt="React"
+                height="30"
+                width="30"
+                src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png"
+              />
+            </code>
+            <code>
+              <Image
+                title="TypeScript"
+                alt="TypeScript"
+                height="30"
+                width="30"
+                src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/typescript/typescript.png"
+              />
+            </code>
+            <code>
+              <Image
+                title="Express"
+                alt="Express"
+                height="30"
+                width="30"
+                src="https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/000/359/full/expressjslogo.png"
+              />
+            </code>
+            <code>
+              <Image
+                title="Azure"
+                alt="Azure"
+                height="30"
+                width="30"
+                src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/azure/azure.png"
+              />
+            </code>
+            <code>
+              <Image
+                title="JavaScript"
+                alt="JavaScript"
+                height="30"
+                width="30"
+                src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png"
+              />
+            </code>
+            <code>
+              <Image
+                title="Node"
+                alt="Node"
+                height="30"
+                width="30"
+                src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/nodejs/nodejs.png"
+              />
+            </code>
+            <code>
+              <Image
+                title="Storybook"
+                alt="Storybook"
+                height="30"
+                width="30"
+                src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/storybook/storybook.png"
+              />
+            </code>
+            <code>
+              <Image
+                title="Webpack"
+                alt="Webpack"
+                height="30"
+                width="30"
+                src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/webpack/webpack.png"
+              />
+            </code>
+            <code>
+              <Image
+                title="Git"
+                alt="Git"
+                height="30"
+                width="30"
+                src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/git/git.png"
+              />
+            </code>
+          </Group>
+        </List>
+        <Flex direction="column" justify="flex-start" align="flex-start">
+          <Space h="md" />
+          <Title order={3}>Get in touch:</Title>
+          <Space h="md" />
+          <List spacing={4} listStyleType="disc">
+            <List.Item>
+              Twitter [@AbhijitRao_](https://twitter.com/AbhijitRao_)
+            </List.Item>
+            <List.Item>
+              GitHub [@abhijit945](https://github.com/abhijit945)
+            </List.Item>
+            <List.Item>
+              Instagram [@abhijit945](https://instagram.com/abhijit945)
+            </List.Item>
+            <List.Item>Email abhijit945@duck.com</List.Item>
+          </List>
+        </Flex>
+      </Paper>
+    </Container>
