@@ -8,9 +8,6 @@ const withNextra = require('nextra')({
   defaultShowCopyCode: true,
 });
 
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  // any configs you need
-};
+const nextConfig = {};
 
 module.exports = withNextra(nextConfig);
