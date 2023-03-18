@@ -6,8 +6,9 @@ const getInitialProps = createGetInitialProps();
 export default class _Document extends Document {
   static getInitialProps = getInitialProps;
   title = 'Portfolio - Abhijit Rao';
-  description = `Brain dump`;
-  image = '/icons/main.svg';
+  description = 'Brain dump';
+  image =
+    'https://raw.githubusercontent.com/abhijit945/turbo-profile/main/public/icons/main.svg';
   render() {
     return (
       <Html lang="en">
