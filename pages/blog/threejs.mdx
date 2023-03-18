@@ -6,7 +6,7 @@ tag: web development
 author: You
 ---
 
-import {Image} from '@mantine/core';
+import {Image, Space} from '@mantine/core';
 
 # Three.js with React
 
@@ -19,9 +19,24 @@ choppy with 5-6 frames per second with every drag/pan or zoom action. The output
 was choppy [1] and [2], FPS would decrease even more when we use
 `meshStandardMaterial` with a `TextureLoader`.
 
+<Space h="lg" />
 <Image maw={500} mx="auto" radius="xl" withPlaceholder alt="Picture of the f16" src="/img/three/f16.png"/>
-
+<Space h="lg" />
 <Image maw={500} mx="auto" radius="xl" withPlaceholder alt="Picture of the 777" src="/img/three/777.png"/>
+
+```ts
+const colorMap = useLoader(TextureLoader, '[...].jpg');
+const geom = useLoader(STLLoader, '[...].stl');
+```
+
+```ts
+<mesh
+    {...props}
+    ref={ref}>
+    <meshStandardMaterial map={colorMap} />
+    <primitive object={geom} attach="geometry" />
+</mesh>
+```
 
 ## Why glTF
 
@@ -39,7 +54,9 @@ was choppy [1] and [2], FPS would decrease even more when we use
 > file formats like FBX lack. So it’s become a go-to for businesses blending 3D
 > models and the World Wide Web.
 
-More info here: https://www.modelry.ai/blog/guide-to-3d-file-formats
+- More info here: https://www.modelry.ai/blog/guide-to-3d-file-formats
+
+### After Refactor
 
 ### Resources for glTF
 
@@ -52,4 +69,4 @@ You can download glTF and glb from:
 
 ## Some Gotchas
 
-[Solution to Resolve dynamic loading of gltf files](https://stackoverflow.com/questions/67154742/react-three-react-three-fiber-useloader-to-load-new-file-on-props-change?rq=1)
+- [Solution to Resolve dynamic loading of gltf files](https://stackoverflow.com/questions/67154742/react-three-react-three-fiber-useloader-to-load-new-file-on-props-change?rq=1)
