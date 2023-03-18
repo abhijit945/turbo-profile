@@ -1,0 +1,55 @@
+---
+title: Three.js with React
+date: 2022/3/18
+description: My experiments with Three.js
+tag: web development
+author: You
+---
+
+import {Image} from '@mantine/core';
+
+# Three.js with React
+
+<Image maw={300} mx="auto" radius="xl" withPlaceholder alt="Picture of the threejs" src="https://raw.githubusercontent.com/mrdoob/three.js/dev/icon.png"/>
+
+## Experiments with STL vs glTF
+
+I wanted to create a 3D viewer using an .stl file but the rendering was very
+choppy with 5-6 frames per second with every drag/pan or zoom action. The output
+was choppy [1] and [2], FPS would decrease even more when we use
+`meshStandardMaterial` with a `TextureLoader`.
+
+<Image maw={500} mx="auto" radius="xl" withPlaceholder alt="Picture of the f16" src="/img/three/f16.png"/>
+
+<Image maw={500} mx="auto" radius="xl" withPlaceholder alt="Picture of the 777" src="/img/three/777.png"/>
+
+## Why glTF
+
+> glTF is a 3D file format maintained by the Khronos Group. It is an all-purpose
+> transmission format, but it has been adopted by Google as the format of choice
+> for Augmented Reality (AR) on Android’s Scene Viewer. GLB is a binary
+> container format of glTF. It bundles all the textures and mesh data into a
+> single file.
+
+> glTF works well for web-based AR. In fact, web giants like Facebook and Google
+> have adopted the format for their AR services due to its efficient design and
+> sheer speed.
+
+> glTF was designed to maximize web browser compatibility – something that 3D
+> file formats like FBX lack. So it’s become a go-to for businesses blending 3D
+> models and the World Wide Web.
+
+More info here: https://www.modelry.ai/blog/guide-to-3d-file-formats
+
+### Resources for glTF
+
+You can download glTF and glb from:
+
+- https://sketchfab.com/3d-models
+- https://github.com/KhronosGroup/glTF-Sample-Models
+- https://market.pmnd.rs/
+- https://polyhaven.com/ (For all kinds of Textures and Backgrounds)
+
+## Some Gotchas
+
+[Solution to Resolve dynamic loading of gltf files](https://stackoverflow.com/questions/67154742/react-three-react-three-fiber-useloader-to-load-new-file-on-props-change?rq=1)
