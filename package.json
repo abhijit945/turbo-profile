@@ -5,10 +5,9 @@
   "dependencies": {
     "@emotion/react": "^11.10.6",
     "@emotion/server": "^11.10.0",
-    "@mantine/core": "^6.0.2",
-    "@mantine/hooks": "^6.0.2",
-    "@mantine/next": "^6.0.2",
-    "@tabler/icons-react": "^2.10.0",
+    "@mantine/core": "^6.0.4",
+    "@mantine/hooks": "^6.0.4",
+    "@mantine/next": "^6.0.4",
     "gray-matter": "^4.0.3",
     "next": "^13.2.4",
     "nextra": "^2.2.19",
@@ -17,12 +16,12 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@types/node": "^18.15.3",
+    "@types/node": "^18.15.6",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "eslint": "8.36.0",
     "eslint-config-next": "13.2.4",
-    "eslint-config-prettier": "^8.7.0",
+    "eslint-config-prettier": "^8.8.0",
     "typescript": "^5.0.2"
   },
   "prettier": {

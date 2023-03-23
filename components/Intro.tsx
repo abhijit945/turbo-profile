@@ -23,7 +23,7 @@ export const Intro = () => (
     />
     <Space h="lg" />
     <Paper shadow="lg" radius="lg" p="lg">
-      <Text variant="gradient" gradient={{ from: 'red', to: 'teal', deg: 45 }}>
+      <Text variant="gradient">
         Hi there! I am a Senior Software Engineer at SparkCognition, where I am
         responsible for driving the development of our &quot;Manufacturing
         Suite&quot; and &quot;Oil & Gas Maintenance Advisor&quot; as the Tech

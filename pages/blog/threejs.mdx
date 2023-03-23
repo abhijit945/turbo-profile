@@ -50,6 +50,25 @@ const geom = useLoader(STLLoader, '[...].stl');
 
 ### After Refactor
 
+```ts
+const ref = useRef<Mesh>(null!);
+const { scene } = useGLTF(url);
+// ...
+
+useLayoutEffect(() => {
+    scene?.traverse(obj => {
+      if ((obj as Mesh).isMesh) {
+        obj.castShadow = true;
+        obj.receiveShadow = true;
+      }
+    });
+  }, [scene, hotspotList]);
+
+// ...
+
+return (<primitive ref={ref} castShadow receiveShadow object={scene} />)
+```
+
 ### Resources for glTF
 
 You can download glTF and glb from:
