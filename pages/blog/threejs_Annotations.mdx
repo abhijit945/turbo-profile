@@ -81,8 +81,39 @@ function MyScene() {
 }
 ```
 
-This will add the Annotation component to the scene, and the message will be
+This will add the `Annotation` component to the scene, and the message will be
 displayed when the user hovers over the pink box.
+
+## Onclick position
+
+If you want to create annotations on click, then you can achieve this by adding
+an `OnClick` event on the parent i.e. Annotation's Mesh.
+
+```js
+onClick={(e: ThreeEvent<MouseEvent> | any) => {
+    e.stopPropagation();
+    const uuid = uuidv4();
+    const data = {
+        uuid,
+        position: e.point,
+    };
+}}
+```
+
+In the Html element you can use the `data.position` and pass it by doing:
+
+```js
+<Html
+    key={uuidv4()}
+    prepend
+    zIndexRange={[100, 0]}
+    position={[
+        position.x,
+        position.y,
+        position.z,
+    ]}>
+    </Html>
+```
 
 In conclusion, React Three Fiber provides a simple and intuitive way to add
 annotations to a ThreeJS scene. By using declarative React syntax and the Html
