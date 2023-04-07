@@ -1,20 +1,24 @@
-# Three.JS with Annotations
+import {Image} from '@mantine/core';
 
-ThreeJS is a powerful library that enables developers to create interactive 3D
-visualizations and animations on the web. React Three Fiber is a library that
-builds upon ThreeJS and allows developers to use declarative React syntax to
+# `three.js` with Annotations
+
+<Image maw={200} mx="auto" radius="xl" withPlaceholder alt="Picture of the `three.js`" src="https://raw.githubusercontent.com/mrdoob/three.js/dev/icon.png"/>
+
+`three.js` is a powerful library that enables developers to create interactive
+3D visualizations and animations on the web. `React Three Fiber` is a library that
+builds upon `three.js` and allows developers to use declarative React syntax to
 create and manipulate 3D scenes. In this blog post, we will explore how to use
-React Three Fiber to add annotations to a ThreeJS scene.
+`React Three Fiber` to add annotations to a `three.js` scene.
 
 Annotations are a great way to provide additional information about a 3D scene
 to users. They can be used to highlight specific areas of interest, explain
 features or functionality, or provide instructions on how to interact with the
-scene. With React Three Fiber, adding annotations to a 3D scene is
+scene. With `React Three Fiber`, adding annotations to a 3D scene is
 straightforward.
 
-To get started, we first need to set up a ThreeJS scene using React Three Fiber.
-We can do this by creating a new React component and importing the necessary
-libraries:
+To get started, we first need to set up a `three.js` scene using React Three
+Fiber. We can do this by creating a new React component and importing the
+necessary libraries:
 
 ```js
 import React, { useRef } from 'react'
@@ -22,7 +26,7 @@ import { Canvas } from 'react-three-fiber'
 import * as THREE from 'three'
 ```
 
-In the component, we can create a ThreeJS scene by defining a canvas element
+In the component, we can create a `three.js` scene by defining a canvas element
 using the Canvas component:
 
 ```js
@@ -34,7 +38,6 @@ function MyScene() {
     </Canvas>
   )
 }
-
 ```
 
 This creates a simple 3D scene with a camera positioned at the origin.
@@ -58,11 +61,10 @@ function Annotation() {
     </mesh>
   )
 }
-
 ```
 
 This component creates a 3D box with a pink material and adds an HTML element as
-a child of the mesh using the Html component from React Three Fiber. The HTML
+a child of the mesh using the Html component from `React Three Fiber`. The HTML
 element contains a message that will be displayed when the user hovers over the
 box.
 
@@ -115,8 +117,8 @@ In the Html element you can use the `data.position` and pass it by doing:
     </Html>
 ```
 
-In conclusion, React Three Fiber provides a simple and intuitive way to add
-annotations to a ThreeJS scene. By using declarative React syntax and the Html
-component, developers can easily create informative and interactive 3D
+In conclusion, `React Three Fiber` provides a simple and intuitive way to add
+annotations to a `three.js` scene. By using declarative React syntax and the
+Html component, developers can easily create informative and interactive 3D
 visualizations that engage users and enhance their understanding of complex data
 or concepts.
