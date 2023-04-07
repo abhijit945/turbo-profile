@@ -1,0 +1,85 @@
+import {Image} from '@mantine/core';
+
+# `three.js` and CAD Assistant
+
+<Image maw={200} mx="auto" radius="xl" withPlaceholder alt="Picture of the `three.js`" src="https://raw.githubusercontent.com/mrdoob/three.js/dev/icon.png"/>
+
+In today's world, 3D modeling is becoming increasingly essential in the design
+and manufacturing industries. 3D models help designers visualize their products
+and designs before production, reducing the cost and time required for physical
+prototyping. Computer-aided design (CAD) software is the primary tool used for
+3D modeling, and the ability to convert CAD models to the web-friendly GLB
+format can be incredibly valuable. In this blog post, we will explore how to use
+CAD Assistant to convert CAD files to GLB files and then display them using
+`three.js`.
+
+CAD Assistant is a free tool that allows users to convert CAD files to a variety
+of formats, including GLB. GLB is a binary format that is ideal for displaying
+3D models on the web since it contains all the necessary information for
+rendering a 3D model in a single file. To get started, we need to convert our
+CAD file to a GLB file using CAD Assistant.
+
+First, we can download and install CAD Assistant from the developer's website.
+Once installed, we can open the application and select "Import" from the file
+menu to import our CAD file. CAD Assistant supports a wide range of file
+formats, including STEP, IGES, and STL.
+
+After importing the CAD file, we can select "Export" from the file menu and
+choose "GLTF/GLB" as the export format. We can then choose the desired export
+settings, such as the scale and rotation of the model. Finally, we can click
+"Export" to generate a GLB file.
+
+Now that we have our GLB file, we can use `three.js` to display the 3D model in
+a web browser. `three.js` is a powerful JavaScript library that enables
+developers to create 3D visualizations and animations on the web. To display our
+GLB file using `three.js`, we can use the `useGLTF` to load the file into our
+scene:
+
+```js
+import { useGLTF } from '@react-three/drei'
+
+function MyModel() {
+  const { nodes, materials } = useGLTF('/path/to/model.glb')
+
+  return (
+    <group>
+      <mesh
+        geometry={nodes.mesh_0.geometry}
+        material={materials.material_0}
+      />
+    </group>
+  )
+}
+
+function App() {
+  return (
+    <Canvas>
+      <Suspense fallback={<div>Loading...</div>}>
+        <MyModel />
+      </Suspense>
+    </Canvas>
+  )
+}
+```
+
+This code defines a React component called "MyModel" that loads a GLB file using
+the UseGLTF Loader from React Three Fiber. The "useGLTF" hook takes the path to
+the GLB file as a parameter and returns an object that contains the loaded nodes
+and materials.
+
+In this example, we're only using one node and one material, so we can access
+them directly using the "nodes" and "materials" properties of the returned
+object. We then use these properties to create a "mesh" component that renders
+the geometry with the material.
+
+Note that the UseGLTF Loader automatically handles the asynchronous loading of
+the GLB file, so there's no need to worry about loading the file manually. Also,
+make sure to wrap your component in a Suspense component to handle any loading
+errors or delays.
+
+In conclusion, CAD Assistant is a powerful tool for converting CAD files to the
+GLB format, which is ideal for displaying 3D models on the web. With ThreeJS, we
+can easily load and manipulate GLB files to create interactive 3D visualizations
+and animations. The ability to convert CAD files to GLB format opens up new
+possibilities for displaying 3D models on the web, making it easier than ever to
+visualize and share designs and products.
