@@ -1,1 +1,91 @@
 # Three.JS with Annotations
+
+ThreeJS is a powerful library that enables developers to create interactive 3D
+visualizations and animations on the web. React Three Fiber is a library that
+builds upon ThreeJS and allows developers to use declarative React syntax to
+create and manipulate 3D scenes. In this blog post, we will explore how to use
+React Three Fiber to add annotations to a ThreeJS scene.
+
+Annotations are a great way to provide additional information about a 3D scene
+to users. They can be used to highlight specific areas of interest, explain
+features or functionality, or provide instructions on how to interact with the
+scene. With React Three Fiber, adding annotations to a 3D scene is
+straightforward.
+
+To get started, we first need to set up a ThreeJS scene using React Three Fiber.
+We can do this by creating a new React component and importing the necessary
+libraries:
+
+```js
+import React, { useRef } from 'react'
+import { Canvas } from 'react-three-fiber'
+import * as THREE from 'three'
+```
+
+In the component, we can create a ThreeJS scene by defining a canvas element
+using the Canvas component:
+
+```js
+function MyScene() {
+  const cameraRef = useRef()
+  return (
+    <Canvas>
+      <perspectiveCamera ref={cameraRef} position={[0, 0, 5]} />
+    </Canvas>
+  )
+}
+
+```
+
+This creates a simple 3D scene with a camera positioned at the origin.
+
+Next, we can add annotations to the scene by creating new React components that
+represent the annotations. For example, we can create a component that displays
+a tooltip when the user hovers over a specific part of the scene:
+
+```js
+function Annotation() {
+  const meshRef = useRef()
+  return (
+    <mesh ref={meshRef} position={[1, 1, 1]}>
+      <boxBufferGeometry args={[1, 1, 1]} />
+      <meshStandardMaterial color="hotpink" />
+      <Html position={[0, 0, 0]}>
+        <div style={{ backgroundColor: 'hotpink', padding: '0.25rem 0.5rem' }}>
+          <p>This is an annotation!</p>
+        </div>
+      </Html>
+    </mesh>
+  )
+}
+
+```
+
+This component creates a 3D box with a pink material and adds an HTML element as
+a child of the mesh using the Html component from React Three Fiber. The HTML
+element contains a message that will be displayed when the user hovers over the
+box.
+
+Finally, we can add the Annotation component to our scene by rendering it inside
+the Canvas component:
+
+```js
+function MyScene() {
+  const cameraRef = useRef()
+  return (
+    <Canvas>
+      <perspectiveCamera ref={cameraRef} position={[0, 0, 5]} />
+      <Annotation />
+    </Canvas>
+  )
+}
+```
+
+This will add the Annotation component to the scene, and the message will be
+displayed when the user hovers over the pink box.
+
+In conclusion, React Three Fiber provides a simple and intuitive way to add
+annotations to a ThreeJS scene. By using declarative React syntax and the Html
+component, developers can easily create informative and interactive 3D
+visualizations that engage users and enhance their understanding of complex data
+or concepts.
