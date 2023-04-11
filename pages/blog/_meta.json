@@ -1,7 +1,5 @@
 {
   "markdown": "Markdown",
   "pages": "NextJS Pages",
-  "threejs": "ThreeJS with React",
-  "annotations": "ThreeJS with Annotations",
-  "cadAssistant": "ThreeJS and CAD Assistant"
+  "threejs": "ThreeJS"
 }
