@@ -12,28 +12,27 @@ export default class _Document extends Document {
           <link
             rel="apple-touch-icon"
             sizes="180x180"
-            href="/favicon/apple-touch-icon.png"
+            href="/favicon/favicon.png"
           />
           <link
             rel="icon"
             type="image/png"
             sizes="32x32"
-            href="/favicon/favicon-32x32.png"
+            href="/favicon/favicon.png"
           />
           <link
             rel="icon"
             type="image/png"
             sizes="16x16"
-            href="/favicon/favicon-16x16.png"
+            href="/favicon/favicon.png"
           />
-          <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
           <link rel="manifest" href="/site.webmanifest" />
-          <link rel="mask-icon" href="/favicon/favicon.svg" color="#000000" />
+          <link rel="mask-icon" href="/favicon/favicon.png" color="#000000" />
           <link rel="shortcut icon" href="/favicon/favicon.ico" />
           <link
             rel="icon"
             type="image/svg+xml"
-            href="/favicon/favicon-32x32.png"
+            href="/favicon/favicon.png"
           />
           <meta name="msapplication-TileColor" content="#ffffff" />
           <meta

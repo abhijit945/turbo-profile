@@ -125,7 +125,7 @@ export const Intro = () => (
       <p className="text-center shadow p-12 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 rounded-xl font-semibold text-3xl my-3 snap-always snap-center">
         Experiences
       </p>
-      <div className="flex flex-wrap space-x-6 place-content-center">
+      <div className="flex flex-wrap place-content-center">
         <div className="m-4 flex items-center shadow rounded-2xl flex-col bg-gradient-to-r from-red-400/30 via-pink-500/30 to-purple-500/30 min-w-80">
           <p className="m-3 font-bold text-xl text-black align-top">
             SparkCognition
@@ -166,8 +166,17 @@ export const Intro = () => (
       <p className="text-center shadow p-12 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 rounded-xl my-3 font-semibold text-3xl snap-always snap-center">
         Get in touch
       </p>
-      <ul className="grid grid-cols-2 auto-cols-fr items-center">
-        <li className="p-4 m-4 flex items-center justify-center flex-wrap">
+      <ul className="grid grid-cols-4 auto-cols-fr items-center  justify-center">
+        <li className="p-6 m-4 flex items-center justify-center flex-wrap shadow rounded-full bg-gradient-to-r from-red-400/30 via-pink-500/30 to-purple-500/30 ">
+          <Link
+            className="text-sm underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
+            target="_blank"
+            referrerPolicy="no-referrer"
+            href="mailto:abhijit945@duck.com">
+            Email
+          </Link>
+        </li>
+        <li className="p-6 m-4 flex items-center justify-center flex-wrap shadow rounded-full bg-gradient-to-r from-red-400/30 via-pink-500/30 to-purple-500/30">
           <Link
             className="text-sm underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
             target="_blank"
@@ -176,7 +185,7 @@ export const Intro = () => (
             X (Twitter) [@AbhijitRao_]
           </Link>
         </li>
-        <li className="p-4 m-4 flex items-center justify-center flex-wrap">
+        <li className="p-6 m-4 flex items-center justify-center flex-wrap shadow rounded-full bg-gradient-to-r from-red-400/30 via-pink-500/30 to-purple-500/30">
           <Link
             className="text-sm underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
             target="_blank"
@@ -185,22 +194,13 @@ export const Intro = () => (
             GitHub [@abhijit945]
           </Link>
         </li>
-        <li className="p-4 m-4 flex items-center justify-center flex-wrap">
+        <li className="p-6 m-4 flex items-center justify-center flex-wrap shadow rounded-full bg-gradient-to-r from-red-400/30 via-pink-500/30 to-purple-500/30">
           <Link
             className="text-sm underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
             target="_blank"
             referrerPolicy="no-referrer"
             href="https://instagram.com/abhijit945">
             Instagram [@abhijit945]
-          </Link>
-        </li>
-        <li className="p-4 m-4 flex items-center justify-center flex-wrap">
-          <Link
-            className="text-sm underline text-blue-600 hover:text-blue-800 visited:text-purple-600"
-            target="_blank"
-            referrerPolicy="no-referrer"
-            href="mailto:abhijit945@duck.com">
-            Email
           </Link>
         </li>
       </ul>
