@@ -1,8 +1,10 @@
-import {Image} from '@mantine/core';
+import Image from 'next/image';
 
 # `three.js` and CAD Assistant
 
-<Image maw={200} mx="auto" radius="xl" withPlaceholder alt="Picture of the `three.js`" src="https://raw.githubusercontent.com/mrdoob/three.js/dev/icon.png"/>
+<Image className="flex rounded-full justify-center items-center mx-auto" width="250" height="250" placeholder="blur" blurDataURL="data:image/gif;base64,R0lGODlhAQABAPAA${
+    triplet(0, r, g) + triplet(b, 255, 255)
+  }/yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Picture of the `three.js`" src="https://raw.githubusercontent.com/mrdoob/three.js/dev/icon.png"/>
 
 In today's world, 3D modeling is becoming increasingly essential in the design
 and manufacturing industries. 3D models help designers visualize their products

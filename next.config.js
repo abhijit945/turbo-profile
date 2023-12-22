@@ -8,6 +8,17 @@ const withNextra = require('nextra')({
   defaultShowCopyCode: true,
 });
 
-const nextConfig = {};
+const nextConfig = {
+  images: {
+    formats: ['image/avif', 'image/webp'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'raw.githubusercontent.com',
+        port: '',
+      },
+    ],
+  },
+};
 
 module.exports = withNextra(nextConfig);

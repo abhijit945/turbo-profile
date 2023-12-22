@@ -10,7 +10,7 @@ export default {
   },
   useNextSeoProps() {
     return {
-      titleTemplate: '%s – Abhijit Rao',
+      titleTemplate: 'Abhijit Rao - %s',
     };
   },
   primaryHue: 330,

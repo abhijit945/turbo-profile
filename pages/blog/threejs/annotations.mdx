@@ -1,8 +1,10 @@
-import {Image} from '@mantine/core';
+import Image from 'next/image';
 
 # `three.js` with Annotations
 
-<Image maw={200} mx="auto" radius="xl" withPlaceholder alt="Picture of the `three.js`" src="https://raw.githubusercontent.com/mrdoob/three.js/dev/icon.png"/>
+<Image className="flex rounded-full justify-center items-center mx-auto" width="250" height="250" placeholder="blur" blurDataURL="data:image/gif;base64,R0lGODlhAQABAPAA${
+    triplet(0, r, g) + triplet(b, 255, 255)
+  }/yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Picture of the `three.js`" src="https://raw.githubusercontent.com/mrdoob/three.js/dev/icon.png"/>
 
 `three.js` is a powerful library that enables developers to create interactive
 3D visualizations and animations on the web. `React Three Fiber` is a library that
@@ -86,7 +88,7 @@ function MyScene() {
 This will add the `Annotation` component to the scene, and the message will be
 displayed when the user hovers over the pink box.
 
-## Onclick position
+## OnClick position
 
 If you want to create annotations on click, then you can achieve this by adding
 an `OnClick` event on the parent i.e. Annotation's Mesh.

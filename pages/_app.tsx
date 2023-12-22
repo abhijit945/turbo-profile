@@ -1,11 +1,13 @@
 'use client';
 
-import { MantineProvider } from '@mantine/core';
+import clsx from 'clsx';
 import type { AppProps } from 'next/app';
-import Head from 'next/head';
+import { Inter } from 'next/font/google';
 import 'nextra-theme-docs/style.css';
 import { useEffect, useState } from 'react';
 import '../styles/main.css';
+
+const inter = Inter({ subsets: ['latin'] });
 
 export default function App({ Component, pageProps }: AppProps) {
   const [mounted, setMounted] = useState(false);
@@ -14,28 +16,8 @@ export default function App({ Component, pageProps }: AppProps) {
   }, []);
 
   return mounted ? (
-    <>
-      <Head>
-        <link
-          rel="preload"
-          href="/fonts/Inter-roman.latin.var.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
-      </Head>
-      <MantineProvider
-        withGlobalStyles
-        withNormalizeCSS
-        theme={{
-          fontFamily:
-            "'Inter var', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI'",
-          colorScheme: 'light',
-        }}>
-        <main>
-          <Component {...pageProps} />
-        </main>
-      </MantineProvider>
-    </>
+    <main className={clsx(inter.className, 'overscroll-auto', 'scroll-smooth')}>
+      <Component {...pageProps} />
+    </main>
   ) : null;
 }

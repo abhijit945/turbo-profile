@@ -1,9 +1,10 @@
-import {Image, Space} from '@mantine/core';
+import Image from 'next/image';
 
 # `three.js` with React
 
-<Image maw={200} mx="auto" radius="xl" withPlaceholder alt="Picture of the `three.js`" src="https://raw.githubusercontent.com/mrdoob/three.js/dev/icon.png"/>
-
+<Image className="flex rounded-full justify-center items-center mx-auto" width="250" height="250" placeholder="blur" blurDataURL="data:image/gif;base64,R0lGODlhAQABAPAA${
+    triplet(0, r, g) + triplet(b, 255, 255)
+  }/yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Picture of the `three.js`" src="https://raw.githubusercontent.com/mrdoob/three.js/dev/icon.png"/>
 ## Experiments with STL vs glTF
 
 I wanted to create a 3D viewer using an .stl file but the rendering was very
@@ -11,10 +12,15 @@ choppy with 5-6 frames per second with every drag/pan or zoom action. The output
 was choppy [1] and [2], FPS would decrease even more when we use
 `meshStandardMaterial` with a `TextureLoader`.
 
-<Space h="lg" />
-<Image maw={500} mx="auto" radius="xl" withPlaceholder alt="Picture of the f16" src="/img/three/f16.png"/>
-<Space h="lg" />
-<Image maw={500} mx="auto" radius="xl" withPlaceholder alt="Picture of the 777" src="/img/three/777.png"/>
+<div className='flex flex-col gap-3 items-center justify-center'>
+  <Image className="rounded" width="300" height="300" placeholder="blur" blurDataURL="data:image/gif;base64,R0lGODlhAQABAPAA${
+      triplet(0, r, g) + triplet(b, 255, 255)
+    }/yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Picture of the f16" src="/img/three/f16.png"/>
+
+  <Image className="rounded" width="300" height="300" placeholder="blur" blurDataURL="data:image/gif;base64,R0lGODlhAQABAPAA${
+      triplet(0, r, g) + triplet(b, 255, 255)
+    }/yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Picture of the 777" src="/img/three/777.png"/>
+</div>
 
 ```ts
 const colorMap = useLoader(TextureLoader, '[...].jpg');

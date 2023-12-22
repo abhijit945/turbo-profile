@@ -1,12 +1,8 @@
-import { createGetInitialProps } from '@mantine/next';
 import Document, { Head, Html, Main, NextScript } from 'next/document';
 
-const getInitialProps = createGetInitialProps();
-
 export default class _Document extends Document {
-  static getInitialProps = getInitialProps;
-  title = 'Portfolio - Abhijit Rao';
-  description = 'Brain dump';
+  title = 'Abhijit Rao - Portfolio';
+  description = 'Personal blog and portfolio site';
   image =
     'https://raw.githubusercontent.com/abhijit945/turbo-profile/main/public/icons/main.svg';
   render() {
@@ -42,7 +38,7 @@ export default class _Document extends Document {
           <meta name="msapplication-TileColor" content="#ffffff" />
           <meta
             name="apple-mobile-web-app-title"
-            content="Abhijit Rao's Blog"
+            content="Personal blog and portfolio site"
           />
           <meta name="robots" content="follow, index" />
           <meta name="description" content={this.description} />
