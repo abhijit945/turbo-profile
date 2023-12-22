@@ -1,8 +1,13 @@
-import {Image} from '@mantine/core';
+---
+date: '2023-03-05'
+title: Annotations 
+description: Annotating in a 3D moded using R3F and ThreeJS
+readTime: 5
+---
 
-# `three.js` with Annotations
+# Annotations
 
-<Image maw={200} mx="auto" radius="xl" withPlaceholder alt="Picture of the `three.js`" src="https://raw.githubusercontent.com/mrdoob/three.js/dev/icon.png"/>
+<img className="rounded-full" width="500" height="500" alt="Picture of the `three.js`" src="/assets/three/dev.png"/>
 
 `three.js` is a powerful library that enables developers to create interactive
 3D visualizations and animations on the web. `React Three Fiber` is a library that
@@ -105,15 +110,15 @@ onClick={(e: ThreeEvent<MouseEvent> | any) => {
 In the Html element you can use the `data.position` and pass it by doing:
 
 ```js
-<Html
-    key={uuidv4()}
-    prepend
-    zIndexRange={[100, 0]}
-    position={[
-        position.x,
-        position.y,
-        position.z,
-    ]}>
+    <Html
+      key={uuidv4()}
+      prepend
+      zIndexRange={[100, 0]}
+      position={[
+          position.x,
+          position.y,
+          position.z,
+      ]}>
     </Html>
 ```
 

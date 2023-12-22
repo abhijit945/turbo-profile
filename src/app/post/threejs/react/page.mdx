@@ -1,8 +1,13 @@
-import {Image, Space} from '@mantine/core';
+---
+date: '2023-03-05'
+title: React 
+description: Using different loaders from ThreeJS
+readTime: 5
+---
 
-# `three.js` with React
+# R3F
 
-<Image maw={200} mx="auto" radius="xl" withPlaceholder alt="Picture of the `three.js`" src="https://raw.githubusercontent.com/mrdoob/three.js/dev/icon.png"/>
+<img className="flex rounded-full" width="500" height="500" alt="Picture of the `three.js`" src="/assets/three/dev.png"/>
 
 ## Experiments with STL vs glTF
 
@@ -11,10 +16,10 @@ choppy with 5-6 frames per second with every drag/pan or zoom action. The output
 was choppy [1] and [2], FPS would decrease even more when we use
 `meshStandardMaterial` with a `TextureLoader`.
 
-<Space h="lg" />
-<Image maw={500} mx="auto" radius="xl" withPlaceholder alt="Picture of the f16" src="/img/three/f16.png"/>
-<Space h="lg" />
-<Image maw={500} mx="auto" radius="xl" withPlaceholder alt="Picture of the 777" src="/img/three/777.png"/>
+<div className='p-4 flex items-center flex-col m-2'>
+  <img width="500" height="500" alt="Picture of the f16" src="/assets/three/f16.png"/>
+  <img width="500" height="500" alt="Picture of the 777" src="/assets/three/777.png"/>
+</div>
 
 ```ts
 const colorMap = useLoader(TextureLoader, '[...].jpg');

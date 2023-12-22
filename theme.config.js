@@ -1,16 +1,16 @@
 /* eslint-disable import/no-anonymous-default-export */
-import MainLogo from './components/MainLogo';
+import MainLogo from './src/app/components/MainLogo';
 
 const YEAR = new Date().getFullYear();
 
-/** @type {import('nextra-theme-docs').DocsThemeConfig} */
+/** @type {import('nextra-theme-blog').NextraBlogTheme} */
 export default {
   project: {
     link: 'https://github.com/abhijit945',
   },
   useNextSeoProps() {
     return {
-      titleTemplate: '%s – Abhijit Rao',
+      titleTemplate: 'Abhijit Rao - %s',
     };
   },
   primaryHue: 330,
@@ -33,12 +33,14 @@ export default {
       <footer
         style={{
           display: 'flex',
+          userSelect: 'none',
           alignContent: 'center',
           flex: 1,
-          justifyContent: 'start',
+          justifyContent: 'center',
           color: 'gray',
         }}>
-        <time>{YEAR}</time> © Abhijit Rao.
+        <time>{YEAR}</time>
+        <p>© Abhijit Rao.</p>
       </footer>
     ),
   },

@@ -1,4 +1,10 @@
-export default function MainLogo({ height, width }) {
+export default function MainLogo({
+  height,
+  width,
+}: {
+  height: number;
+  width: number;
+}) {
   return (
     <svg
       height={height}
