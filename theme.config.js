@@ -18,7 +18,6 @@ export default {
     float: true,
     title: () => 'On this page',
   },
-  darkMode: false,
   editLink: {
     component: () => <></>,
   },
