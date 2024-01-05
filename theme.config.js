@@ -1,6 +1,6 @@
-/* eslint-disable import/no-anonymous-default-export */
-import MainLogo from './components/MainLogo';
+import Image from 'next/image';
 
+/* eslint-disable import/no-anonymous-default-export */
 const YEAR = new Date().getFullYear();
 
 /** @type {import('nextra-theme-docs').DocsThemeConfig} */
@@ -25,7 +25,7 @@ export default {
     content: null,
   },
   logo: () => {
-    return <MainLogo width={'100%'} height={24} />;
+    return <Image alt="brand" width={48} height={48} src="/favicon/favicon.png"/>;
   },
   footer: {
     text: (

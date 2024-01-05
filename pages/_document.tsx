@@ -3,8 +3,6 @@ import Document, { Head, Html, Main, NextScript } from 'next/document';
 export default class _Document extends Document {
   title = 'Abhijit Rao - Portfolio';
   description = 'Personal blog and portfolio site';
-  image =
-    'https://raw.githubusercontent.com/abhijit945/turbo-profile/main/public/icons/main.svg';
   render() {
     return (
       <Html lang="en">
@@ -29,11 +27,7 @@ export default class _Document extends Document {
           <link rel="manifest" href="/site.webmanifest" />
           <link rel="mask-icon" href="/favicon/favicon.png" color="#000000" />
           <link rel="shortcut icon" href="/favicon/favicon.ico" />
-          <link
-            rel="icon"
-            type="image/svg+xml"
-            href="/favicon/favicon.png"
-          />
+          <link rel="icon" type="image/svg+xml" href="/favicon/favicon.png" />
           <meta name="msapplication-TileColor" content="#ffffff" />
           <meta
             name="apple-mobile-web-app-title"
@@ -44,12 +38,10 @@ export default class _Document extends Document {
           <meta property="og:site_name" content={this.title} />
           <meta property="og:description" content={this.description} />
           <meta property="og:title" content={this.title} />
-          <meta property="og:image" content={this.image} />
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:site" content="@AbhijitRao_" />
           <meta name="twitter:title" content={this.title} />
           <meta name="twitter:description" content={this.description} />
-          <meta name="twitter:image" content={this.image} />
         </Head>
         <body>
           <Main />
