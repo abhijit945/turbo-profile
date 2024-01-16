@@ -1,6 +1,6 @@
 'use client';
 
-import clsx from 'clsx';
+import { cn } from '../@/lib/utils';
 import type { AppProps } from 'next/app';
 import { Inter } from 'next/font/google';
 import 'nextra-theme-docs/style.css';
@@ -16,7 +16,13 @@ export default function App({ Component, pageProps }: AppProps) {
   }, []);
 
   return mounted ? (
-    <main className={clsx(inter.className, 'overscroll-auto', 'scroll-smooth')}>
+    <main
+      className={cn(
+        inter.className,
+        'overscroll-auto',
+        'scroll-smooth',
+        'antialiased',
+      )}>
       <Component {...pageProps} />
     </main>
   ) : null;

@@ -3,16 +3,20 @@ import Link from 'next/link';
 
 export const Contact = () => {
   return (
-    <div className="flex flex-col space-x-6 my-6 py-3">
-      <p className="text-center shadow p-12 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 rounded-xl my-3 font-semibold text-3xl snap-always snap-center">
+    <section
+      style={{
+        backdropFilter: 'blur(10px)',
+      }}
+      className="flex flex-col space-x-6 my-6 py-3">
+      <p className="text-center shadow p-8 mx-48 text-white bg-gradient-to-r from-cyan-300 via-purple-500 to-red-500 rounded-full font-semibold text-2xl my-3 snap-always snap-center">
         Get in touch
       </p>
-      <ul className="grid grid-cols-4 auto-cols-fr items-center justify-center">
+      <ul className="flex gap-4 items-center justify-center">
         <Link
           target="_blank"
           referrerPolicy="no-referrer"
           href="mailto:abhijit945.work@gmail.com">
-          <li className="p-6 m-4 flex items-center justify-center flex-wrap shadow rounded-xl bg-white hover:bg-gradient-to-r from-red-400/30 via-pink-500/30 to-purple-500/30 transition ease-in-out duration-500 hover:scale-110">
+          <li className="p-6 m-4 flex items-center justify-center flex-wrap bg-transparent shadow-lg dark:bg-gray-800 rounded-2xl  hover:bg-gradient-to-r from-red-400/30 via-pink-500/30 to-purple-500/30 transition ease-in-out duration-500 hover:scale-110">
             <Image
               width="48"
               height="48"
@@ -25,7 +29,7 @@ export const Contact = () => {
           target="_blank"
           referrerPolicy="no-referrer"
           href="https://github.com/abhijit945">
-          <li className="p-6 m-4 flex items-center justify-center flex-wrap shadow rounded-xl bg-white hover:bg-gradient-to-r from-red-400/30 via-pink-500/30 to-purple-500/30 transition ease-in-out duration-500 hover:scale-110">
+          <li className="p-6 m-4 flex items-center justify-center flex-wrap bg-transparent shadow-lg dark:bg-gray-800 rounded-2xl  hover:bg-gradient-to-r from-red-400/30 via-pink-500/30 to-purple-500/30 transition ease-in-out duration-500 hover:scale-110">
             <Image
               width="48"
               height="48"
@@ -38,7 +42,7 @@ export const Contact = () => {
           target="_blank"
           referrerPolicy="no-referrer"
           href="https://twitter.com/AbhijitRao_">
-          <li className="p-8 m-4 flex items-center justify-center flex-wrap shadow rounded-xl bg-white hover:bg-gradient-to-r from-red-400/30 via-pink-500/30 to-purple-500/30 transition ease-in-out duration-500 hover:scale-110">
+          <li className="p-8 m-4 flex items-center justify-center flex-wrap bg-transparent shadow-lg dark:bg-gray-800 rounded-2xl  hover:bg-gradient-to-r from-red-400/30 via-pink-500/30 to-purple-500/30 transition ease-in-out duration-500 hover:scale-110">
             <Image
               width="32"
               height="32"
@@ -51,7 +55,7 @@ export const Contact = () => {
           target="_blank"
           referrerPolicy="no-referrer"
           href="https://instagram.com/abhijit945">
-          <li className="p-6 m-4 flex items-center justify-center flex-wrap shadow rounded-xl bg-white hover:bg-gradient-to-r from-red-400/30 via-pink-500/30 to-purple-500/30 transition ease-in-out duration-500 hover:scale-110">
+          <li className="p-6 m-4 flex items-center justify-center flex-wrap bg-transparent shadow-lg dark:bg-gray-800 rounded-2xl  hover:bg-gradient-to-r from-red-400/30 via-pink-500/30 to-purple-500/30 transition ease-in-out duration-500 hover:scale-110">
             <Image
               width="48"
               height="48"
@@ -61,6 +65,6 @@ export const Contact = () => {
           </li>
         </Link>
       </ul>
-    </div>
+    </section>
   );
 };

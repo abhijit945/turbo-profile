@@ -2,10 +2,15 @@ import Image from 'next/image';
 import { Contact } from './Contact';
 import { Experience } from './Experience';
 import { Skills } from './Skills';
+import { Separator } from './ui/separator';
 
 export const Intro = () => (
   <div className="flex flex-col space-y-4 snap-y snap-mandatory scroll-smooth">
-    <div className="flex items-center justify-center">
+    <div
+      style={{
+        backdropFilter: 'blur(10px)',
+      }}
+      className="flex items-center justify-center">
       <Image
         className="rounded-3xl shadow-xl"
         width="300"
@@ -18,8 +23,12 @@ export const Intro = () => (
       <p className="text-center p-12 font-semibold text-5xl my-3 animate-bounce text-cyan-500">
         Hi there!
       </p>
-      <div className="flex flex-col shadow-lg p-4 rounded-lg gap-4">
-        <p className="font-medium text-gray-700 dark:text-white">
+      <section
+        style={{
+          backdropFilter: 'blur(10px)',
+        }}
+        className="flex flex-col p-8 rounded-lg gap-4">
+        <p className="font-medium text-gray-700 dark:text-white leading-7 [&:not(:first-child)]:mt-6">
           I am a Staff Software Engineer at SparkCognition. I am responsible for
           driving the development of our <strong>Manufacturing Suite </strong>
           and<strong> Oil & Gas Maintenance Advisor</strong> as the Tech Lead. I
@@ -35,7 +44,7 @@ export const Intro = () => (
           508 guidelines compliant, and I have automated deployment jobs in
           Jenkins and TravisCI using TypeScript.
         </p>
-        <p className="font-medium text-gray-700 dark:text-white">
+        <p className="leading-7 [&:not(:first-child)]:mt-6 font-medium text-gray-700 dark:text-white">
           At the University of Texas at Dallas, I earned a Master of Science in
           Computer Science between 2012 and 2014. I define and document vision,
           scope, functional requirements, and risk analysis using solution
@@ -44,10 +53,14 @@ export const Intro = () => (
           diagrams, and other artifacts defined in the requirements workflow of
           the methodology.
         </p>
-      </div>
+      </section>
     </div>
+    <Separator />
     <Skills />
+    <Separator />
     <Experience />
+    <Separator />
     <Contact />
+    <Separator />
   </div>
 );
