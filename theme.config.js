@@ -25,7 +25,9 @@ export default {
     content: null,
   },
   logo: () => {
-    return <Image alt="brand" width={48} height={48} src="/favicon/favicon.png"/>;
+    return (
+      <Image alt="brand" width={48} height={48} src="/favicon/favicon.png" />
+    );
   },
   footer: {
     text: (
@@ -37,7 +39,7 @@ export default {
           justifyContent: 'start',
           color: 'gray',
         }}>
-        <time>{YEAR}</time> © Abhijit Rao.
+        <time>{YEAR}</time> © Abhijit Rao. All rights reserved.
       </footer>
     ),
   },
