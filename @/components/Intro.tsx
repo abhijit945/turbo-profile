@@ -61,6 +61,5 @@ export const Intro = () => (
     <Experience />
     <Separator />
     <Contact />
-    <Separator />
   </div>
 );

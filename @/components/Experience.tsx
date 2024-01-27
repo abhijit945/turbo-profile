@@ -22,9 +22,9 @@ export const Experience = () => {
           </CardHeader>
           <CardContent>
             <Image
-              className="rounded-full m-12"
-              width="150"
-              height="150"
+              className="rounded-full"
+              width="96"
+              height="96"
               alt="SparkCognition"
               src="/img/intro/sparkcognition_logo.jpeg"
             />
@@ -40,9 +40,9 @@ export const Experience = () => {
           </CardHeader>
           <CardContent>
             <Image
-              className="rounded-full m-12"
-              width="150"
-              height="150"
+              className="rounded-full"
+              width="96"
+              height="96"
               alt="Cerner"
               src="/img/intro/cerner-logo-1.png"
             />
@@ -58,9 +58,9 @@ export const Experience = () => {
           </CardHeader>
           <CardContent>
             <Image
-              className="rounded-full m-12"
-              width="150"
-              height="150"
+              className="rounded-full"
+              width="96"
+              height="96"
               alt="TradeStation"
               src="/img/intro/TS-Logo-Mark.png"
             />
