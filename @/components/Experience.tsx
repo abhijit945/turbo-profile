@@ -6,7 +6,7 @@ const CONTENT = [
   {
     title: 'SparkCognition',
     description: (
-      <p className="text-white">
+      <p className="text-white dark:text-black">
         As a Staff Software Engineer at SparkCognition from 2020 to the present,
         I have demonstrated expertise in managing the roadmap for the Industrial
         AI Suite (IAS). My responsibilities included steering the strategic
@@ -45,7 +45,7 @@ const CONTENT = [
   {
     title: 'Cerner',
     description: (
-      <p className="text-white">
+      <p className="text-white dark:text-black">
         As a Senior Software Engineer at Cerner Corporation from 2014 to 2020,
         my role encompassed various responsibilities and contributions to
         software development and project management. I played a key role in the
@@ -84,7 +84,7 @@ const CONTENT = [
   {
     title: 'TradeStation',
     description: (
-      <p className="text-white">
+      <p className="text-white dark:text-black">
         During my internship at TradeStation Technologies as a WebTrading intern
         from 2013 to 2014, I played a significant role in contributing to the
         core products and services of WebTrading, a multi-million-dollar product
