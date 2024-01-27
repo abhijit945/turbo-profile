@@ -6,11 +6,11 @@ export const Skills = () => {
       style={{
         backdropFilter: 'blur(10px)',
       }}
-      className="flex flex-col space-y-12 my-6 py-3">
-      <p className="text-center shadow p-8 mx-48 text-white bg-gradient-to-r from-cyan-300 via-purple-500 to-red-500 rounded-full font-semibold text-2xl my-3 snap-always snap-center">
+      className="my-6 flex flex-col space-y-12 py-3">
+      <p className="mx-48 my-3 select-none snap-center snap-always rounded-full bg-gradient-to-r from-cyan-300 via-purple-500 to-red-500 p-8 text-center text-2xl font-semibold text-white shadow">
         Ask me about
       </p>
-      <div className="flex flex-row flex-wrap space-x-12 items-center justify-center gap-3">
+      <div className="flex flex-row flex-wrap items-center justify-center gap-3 space-x-12">
         <Avatar>
           <AvatarImage
             alt="React"
