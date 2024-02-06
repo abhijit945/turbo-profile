@@ -41,7 +41,7 @@ export const Contact = () => {
             target="_blank"
             referrerPolicy="no-referrer"
             href={c.url}>
-            <li className="m-4 flex flex-wrap items-center justify-center rounded-full bg-transparent from-red-400/30 via-pink-500/30 to-purple-500/30  p-8 shadow-lg transition duration-500 ease-in-out hover:scale-125 hover:bg-gradient-to-r dark:bg-gray-800">
+            <li className="m-2 flex flex-wrap items-center justify-center rounded-full bg-transparent from-red-400/30 via-pink-500/30 to-purple-500/30 p-6 shadow-lg transition duration-500 ease-in-out hover:scale-125 hover:bg-gradient-to-r dark:bg-gray-800">
               <Image width="32" height="32" src={c.image} alt={c.title} />
             </li>
           </Link>

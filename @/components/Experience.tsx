@@ -1,12 +1,16 @@
-import Image from 'next/image';
-import { Card, CardContent, CardHeader } from './ui/card';
-import { useState } from 'react';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from './ui/accordion';
+import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
 
 const CONTENT = [
   {
     title: 'SparkCognition',
     description: (
-      <p className="text-black dark:text-white">
+      <p className="p-4 text-base text-black dark:text-white">
         As a Staff Software Engineer at SparkCognition from 2020 to the present,
         I have demonstrated expertise in managing the roadmap for the Industrial
         AI Suite (IAS). My responsibilities included steering the strategic
@@ -45,7 +49,7 @@ const CONTENT = [
   {
     title: 'Cerner',
     description: (
-      <p className="text-black dark:text-white">
+      <p className="p-4 text-base text-black dark:text-white">
         As a Senior Software Engineer at Cerner Corporation from 2014 to 2020,
         my role encompassed various responsibilities and contributions to
         software development and project management. I played a key role in the
@@ -84,7 +88,7 @@ const CONTENT = [
   {
     title: 'TradeStation',
     description: (
-      <p className="text-black dark:text-white">
+      <p className="p-4 text-base text-black dark:text-white">
         During my internship at TradeStation Technologies as a WebTrading intern
         from 2013 to 2014, I played a significant role in contributing to the
         core products and services of WebTrading, a multi-million-dollar product
@@ -118,7 +122,6 @@ const CONTENT = [
 ];
 
 export const Experience = () => {
-  const [hoverId, setHoverId] = useState(null);
   return (
     <section
       style={{
@@ -129,37 +132,28 @@ export const Experience = () => {
         Experience
       </p>
       <div className="mx-8 flex flex-col flex-wrap">
-        {CONTENT.map(c => (
-          <Card
-            key={c.title}
-            style={{
-              backdropFilter: 'blur(10px)',
-            }}
-            onMouseOver={() => {
-              setHoverId(c.title);
-            }}
-            onMouseLeave={() => {
-              setHoverId(null);
-            }}
-            className="duration-600 z-2 m-4 flex min-w-80 flex-col items-center rounded-2xl bg-transparent from-red-400/30 via-pink-500/30 to-purple-500/30 shadow-lg transition ease-linear hover:scale-y-105 hover:bg-gradient-to-r dark:bg-gray-800">
-            <CardHeader className="m-3 align-top text-xl font-bold text-black dark:text-white">
-              {c.title}
-            </CardHeader>
-            <CardContent>
-              {hoverId === c.title ? (
-                c.description
-              ) : (
-                <Image
-                  className="rounded-full"
-                  width="96"
-                  height="96"
-                  alt={c.title}
-                  src={c.image}
-                />
-              )}
-            </CardContent>
-          </Card>
-        ))}
+        <Accordion
+          className="m-2 rounded-xl border shadow-md"
+          type="single"
+          collapsible>
+          {CONTENT.map(c => (
+            <AccordionItem
+              className="border-none px-6"
+              key={c.title}
+              value={c.title}>
+              <AccordionTrigger className="text-xl font-bold text-black dark:text-white">
+                <div className="m-2 flex w-full flex-row items-center justify-start gap-4">
+                  <Avatar className="m-1 shadow-xl">
+                    <AvatarImage alt={c.title} src={c.image} />
+                    <AvatarFallback>...</AvatarFallback>
+                  </Avatar>
+                  {c.title}
+                </div>
+              </AccordionTrigger>
+              <AccordionContent>{c.description}</AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
       </div>
     </section>
   );
